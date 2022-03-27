@@ -36,7 +36,7 @@ public class BookTest {
     }
 
     @Test
-    void testAddBook() throws InterruptedException {
+    void testAddBook() {
         driver.get("http://localhost:8080/book/add");
 
         WebElement nameField = driver.findElement(By.id("nameInput"));
