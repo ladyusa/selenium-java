@@ -30,14 +30,14 @@ public class BookTest {
 
     @Test
     void testBookHeading() {
-        driver.get("http://localhost:8080/");
+        driver.get("http://localhost:8090/");
         WebElement heading = driver.findElement(By.tagName("h1"));
         assertEquals("Welcome to Wisdom Book Website", heading.getText());
     }
 
     @Test
     void testAddBook() {
-        driver.get("http://localhost:8080/book/add");
+        driver.get("http://localhost:8090/book/add");
 
         WebElement nameField = driver.findElement(By.id("nameInput"));
         WebElement authorField = driver.findElement(By.id("authorInput"));

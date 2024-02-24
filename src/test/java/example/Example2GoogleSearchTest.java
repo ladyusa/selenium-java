@@ -23,11 +23,11 @@ public class Example2GoogleSearchTest {
         WebElement searchBox = driver.findElement(By.name("q"));
         WebElement searchButton = driver.findElement(By.name("btnK"));
 
-        searchBox.sendKeys("Selenium");
+        searchBox.sendKeys("Kasetsart");
         searchButton.click();
 
         searchBox = driver.findElement(By.name("q"));
-        assertEquals("Selenium", searchBox.getAttribute("value"));
+        assertEquals("Kasetsart", searchBox.getAttribute("value"));
 
         driver.quit();
     }
