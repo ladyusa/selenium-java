@@ -1,6 +1,5 @@
 package example;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,7 +11,6 @@ public class Example1WebDriverSetupTest {
 
     @Test
     void testChromeGoogle() {
-        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
 
         driver.get("https://www.google.co.th/");
@@ -23,7 +21,6 @@ public class Example1WebDriverSetupTest {
 
     @Test
     void testFirefoxGoogle() {
-        WebDriverManager.firefoxdriver().setup();
         WebDriver driver = new FirefoxDriver();
 
         driver.get("https://www.google.co.th/");

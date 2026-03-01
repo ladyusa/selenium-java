@@ -1,6 +1,5 @@
 package example;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -18,7 +17,6 @@ public class Example3MultipleGoogleTest {
 
     @BeforeAll
     public static void beforeAll() {
-        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
     }
 
@@ -43,10 +41,10 @@ public class Example3MultipleGoogleTest {
         WebElement searchBox = driver.findElement(By.name("q"));
         WebElement searchButton = driver.findElement(By.name("btnK"));
 
-        searchBox.sendKeys("Selenium");
+        searchBox.sendKeys("Kasetsart");
         searchButton.click();
 
         searchBox = driver.findElement(By.name("q"));
-        assertEquals("Selenium", searchBox.getAttribute("value"));
+        assertEquals("Kasetsart", searchBox.getAttribute("value"));
     }
 }

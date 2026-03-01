@@ -1,6 +1,5 @@
 package book;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -18,7 +17,6 @@ public class BookTest {
 
     @BeforeAll
     public static void beforeAll() {
-        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
     }
@@ -59,5 +57,12 @@ public class BookTest {
         assertEquals("Clean Code", name.getText());
         assertEquals("Robert Martin", author.getText());
         assertEquals("600.00", price.getText());
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }

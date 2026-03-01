@@ -1,6 +1,5 @@
 package example;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -14,7 +13,6 @@ public class Example2GoogleSearchTest {
 
     @Test
     void testSearchGoogle() {
-        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
 
         driver.get("https://www.google.co.th/");
